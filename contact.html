@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Deloitte Inspired</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0a0a0a;
+  color: white;
+}
+
+/* Glass Effect */
+.glass {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Navbar hover underline */
+.nav-link {
+  position: relative;
+  transition: 0.3s;
+}
+.nav-link:hover { color: #00ff88; }
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: #00ff88;
+  transition: 0.3s;
+}
+.nav-link:hover::after { width: 100%; }
+
+/* Lift effect */
+.lift {
+  transition: all 0.4s ease;
+}
+.lift:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0,255,136,0.3);
+}
+
+/* Button glow */
+.btn-glow {
+  transition: all 0.3s ease;
+}
+.btn-glow:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 20px 50px rgba(0,255,136,0.6);
+}
+
+/* Input focus */
+input:focus, textarea:focus {
+  border-color: #00ff88 !important;
+  box-shadow: 0 0 15px rgba(0,255,136,0.4);
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="glass fixed w-full px-10 py-4 flex justify-between items-center z-50">
+  <h1 class="text-green-400 font-bold text-xl">Deloitte Inspired</h1>
+  <div class="space-x-8">
+    <a href="home.html" class="nav-link">Home</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="contact.html" class="nav-link text-green-400">Contact</a>
+  </div>
+</nav>
+
+<!-- CONTACT SECTION -->
+<section class="pt-32 pb-24 px-6">
+  <h2 class="text-5xl font-bold text-center text-green-400 mb-12">
+    Contact Us
+  </h2>
+
+  <div class="max-w-3xl mx-auto glass p-10 rounded-2xl lift">
+    <div class="space-y-6">
+      <input type="text" placeholder="Your Name"
+        class="w-full p-4 bg-black border border-gray-700 rounded-lg outline-none transition">
+
+      <input type="email" placeholder="Your Email"
+        class="w-full p-4 bg-black border border-gray-700 rounded-lg outline-none transition">
+
+      <textarea rows="5" placeholder="Your Message"
+        class="w-full p-4 bg-black border border-gray-700 rounded-lg outline-none transition"></textarea>
+
+      <button type="button"
+        class="w-full bg-green-400 text-black py-4 rounded-lg font-semibold btn-glow">
+        Send Message
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- EXTRA CONTENT (for scrolling) -->
+<section class="py-24 px-10 text-center max-w-5xl mx-auto">
+  <h3 class="text-3xl text-green-400 mb-6">Our Offices</h3>
+  <p class="opacity-80 leading-8 mb-10">
+    We operate across global markets providing strategic advisory,
+    consulting, technology implementation, and risk management services.
+    Our teams collaborate worldwide to deliver measurable impact.
+  </p>
+
+  <div class="grid md:grid-cols-3 gap-10">
+    <div class="glass p-8 rounded-xl lift">
+      <h4 class="text-xl font-semibold mb-3">India</h4>
+      <p>Digital transformation and consulting services hub.</p>
+    </div>
+    <div class="glass p-8 rounded-xl lift">
+      <h4 class="text-xl font-semibold mb-3">United States</h4>
+      <p>Strategic advisory and enterprise innovation leadership.</p>
+    </div>
+    <div class="glass p-8 rounded-xl lift">
+      <h4 class="text-xl font-semibold mb-3">Europe</h4>
+      <p>Technology and sustainability consulting expertise.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-8 text-center text-gray-400 border-t border-gray-800">
+  © 2026 Deloitte Inspired Project
+</footer>
+
+</body>
+</html>
